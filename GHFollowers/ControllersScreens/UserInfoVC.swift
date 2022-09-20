@@ -121,6 +121,8 @@ extension UserInfoVC: UserInfoVCDelegate {
             presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers.", buttonTitle: "Ok")
             return
         }
+        
+        print(user.login)
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
